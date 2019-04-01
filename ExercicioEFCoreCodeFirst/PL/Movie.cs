@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ExercicioEFCoreCodeFirst.PL;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -23,5 +25,7 @@ namespace ExercicioEFCoreCodeFirst
         public int GenreID { get; set; }
 
         public Genre Genre { get; set; }
+
+        public ICollection<ActorMovie> Characeters { get; set; }
     }
 }
